@@ -42,7 +42,7 @@ add_record()
 ```
 takes as a parameter a list of arguments prepared by the processing data function.
 
-Database column are the protocol data obtained previously, sorted into records by timestamp (divided by second), containing data on the protocol, the amount of traffic (size in bytes) and the total number of messages exchanged within that second.
+Database columns are the protocol data obtained previously, sorted into records by timestamp (divided by second), containing data on the protocol, the amount of traffic (size in bytes) and the total number of messages exchanged within that second.
 <br><br>
 #### In case of problems:
 
