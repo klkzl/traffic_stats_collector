@@ -13,22 +13,36 @@ The main program contains three functions for reading data, processing data and 
 <br>
 #### Reading data:
 
-The function takes as a parameter a user defined directory.
+```
+directory_function()
+```
+takes as a parameter a user defined directory.
 
 It allows for looking through the contents of directory for traffic files, extracting the data and providing viable output for further parsing.
 <br>
 #### Processing data:
 
-The function takes as a parameter a traffic file.
+```
+extract_function()
+```
+takes as a parameter a traffic file.
 
 It sorts the data within the file into one second intervals, gives them a time stamp, extracts the information about the protocol, ammount of traffic in bytes within a given second and number of messages exchanged using that protocol within the aggregated time.
 The processing function prepares the data in a format that can be easily uploaded to a database.
 <br>
 #### Uploading the data to a database:
 
-The function takes as a parameter a list of arguments prepared by the processing data function.
+```
+init_db()
+```
+creates a database, if a database does not exist.
 
-The function creates a database, which stores the protocol data obtained previously, sorted into records by timestamp (divided by second), containing data on the protocol, the amount of traffic (size in bytes) and the total number of messages exchanged within that second.
+```
+add_record()
+```
+takes as a parameter a list of arguments prepared by the processing data function.
+
+Database column are the protocol data obtained previously, sorted into records by timestamp (divided by second), containing data on the protocol, the amount of traffic (size in bytes) and the total number of messages exchanged within that second.
 <br><br>
 #### In case of problems:
 
